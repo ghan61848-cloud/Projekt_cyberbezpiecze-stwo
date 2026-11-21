@@ -103,15 +103,9 @@ Get-Content .\suricata-logs\fast.log -Wait
 ---
 
 
-### 1. Skanowanie portów (Nmap)
-![Wynik skanowania Nmap](screenshots/nmap.png)
 
-### 2. Wykrycie ataku SQL Injection przez Suricatę
-![Atak SQLi i alert Suricata](screenshots/sqli-alert.png)
 
----
-
-## 🧹 Zatrzymanie środowiska
+##  Zatrzymanie środowiska
 
 ```bash
 docker compose down

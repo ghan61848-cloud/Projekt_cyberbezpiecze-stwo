@@ -3,7 +3,7 @@ services:
     image: vulnerables/web-dvwa
     container_name: lab_victim_dvwa
     ports:
-            - "8080:80"
+      - "8080:80"
     networks:
       cyber_net:
         ipv4_address: 172.20.0.20
@@ -22,19 +22,19 @@ services:
     container_name: lab_defender_suricata
     network_mode: "service:victim"
     cap_add:
-            - NET_ADMIN
-            - NET_RAW
-            - SYS_NICE
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
     volumes:
-            - ./suricata-logs:/var/log/suricata
-            - ./local.rules:/etc/suricata/rules/local.rules
+      - ./suricata-logs:/var/log/suricata
+      - ./local.rules:/etc/suricata/rules/local.rules
     command: -i eth0 -S /etc/suricata/rules/local.rules
     depends_on:
-            - victim
+      - victim
 
 networks:
   cyber_net:
     driver: bridge
     ipam:
       config:
-                - subnet: 172.20.0.0/24
+        - subnet: 172.20.0.0/24

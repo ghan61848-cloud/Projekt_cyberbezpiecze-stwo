@@ -47,8 +47,8 @@ Wszystkie maszyny działają w dedykowanej, izolowanej sieci mostkowej Dockera (
 
 ### 1. Uruchomienie laboratorium
 ```bash
-git clone (link do repo)
-cd <NAZWA_FOLDERU>
+git clone [https://github.com/ghan61848-cloud/Projekt_cyberbezpiecze-stwo.git]
+cd Projekt_cyberbezpiecze-stwo
 docker compose up -d
 ```
 
